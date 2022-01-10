@@ -1,0 +1,125 @@
+// **** 0s: #011039
+// **** 1st: #394E84
+// **** 2nd: #8296c8
+// **** 4th: #e5edff
+// **** 4th: #FFFFFF
+// **** 5th: #edeba7
+
+
+.header
+    padding: 1.5em 2em
+
+.navbar
+    margin: auto
+    display: flex
+    justify-content: space-between
+
+.brand-container
+    height: max-content
+
+    img
+        width: 50px
+        height: 50px
+        filter: saturate(1.5) brightness(1.5)
+
+.link-group
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+
+    *
+        margin: 0px 2em
+        font-family: 'Fira Mono'
+        color: #B1BFE2
+        font-size: 14px
+
+    p
+        cursor: pointer
+        transition-duration: 0.3s
+
+        &:hover
+            color: #dce6fe
+
+    span
+        margin-inline: 0em 0.5em
+        color: #edeba7
+
+.introduction
+    padding: 5em
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    color: white
+
+    h3
+        margin: 0px
+        color: #edeba7
+        font-size: 16px
+        font-family: 'Fira Mono'
+        font-weight: 100
+
+    h1
+        font-family: 'Spartan'
+
+        span
+            color: #edeba7
+
+        &:nth-of-type(1)
+            font-size: 60px
+            margin: 0.5em 0em 0.25em 0em
+            color: #e5edff
+
+        &:nth-of-type(2)
+            font-size: 52px
+            margin: 0em
+            color: #8296c8
+
+    p
+        width: 60vw
+        margin-block: 2em 4em
+        color: #8296c8
+        font-size: 18px
+        font-family: system-ui
+        line-height: 1.5
+
+    .button-group
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .resume-container
+            .resume
+                @extend .hoverable
+                padding: 1.25em 2.5em
+                border: none
+                border-radius: 0.5em
+                color: #e5edff
+                background-color: #011039
+                box-shadow: 0px 0px 1px 2px #8296c8
+                font-size: 16px
+                font-family: 'Fira Mono'
+                font-weight: 600
+                cursor: pointer
+
+        .external-links
+            display: flex
+            color: #8296c8
+
+            svg
+                @extend .hoverable
+                width: 3em
+                height: 3em
+                margin-inline: 1em
+                padding: 0.25em
+                cursor: pointer
+
+
+.hoverable
+    transition-duration: 0.3s
+
+    &:hover
+        background: #f0f8ff42
+        border-radius: 0.25em
+

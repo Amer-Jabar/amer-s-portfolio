@@ -1,0 +1,80 @@
+// **** 0s: #011039
+// **** 1st: #051745
+// **** 2nd: #4A6099
+// **** 2nd: #8296c8
+// **** 4th: #e5edff
+// **** 5th: #FFFFFF
+// **** 5th: #edeba7
+
+@use 'header.sass'
+
+.skills
+    padding: 6em 2em
+    color: #e5edff
+
+    .skills-header
+        margin-block: 0em 1.5em
+        text-align: center
+        font-size: 48px
+        font-family: 'Spartan'
+    
+.skills-list
+    width: 80%
+    margin-inline: auto
+    padding: 1em
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    border-radius: 0.25em
+    background: linear-gradient(45deg, #10275e, #0b1e4b, #031543)
+    box-shadow: 0px 0px 4px -1px #e5edff
+
+    .skill-element
+        @extend .hoverable
+        height: max-content
+        margin: 1em 3em
+        padding: 1em
+        border: solid 2px #f0f8ffa3
+        border-radius: 0.25em
+
+        &:nth-of-type(1)
+            color: #c8b367
+        &:nth-of-type(2)
+            color: #56a656
+        &:nth-of-type(3)
+            color: white
+        &:nth-of-type(4)
+            color: #7dbe8e
+        &:nth-of-type(5)
+            color: #b5b8be
+        &:nth-of-type(6)
+            color: #56a656
+        &:nth-of-type(7)
+            color: #dede61
+        &:nth-of-type(8)
+            color: #c65858
+            
+
+        svg
+            width: 4em
+            height: 4em
+            margin-inline: auto
+            display: block
+
+        label
+            padding: 0.5em
+            display: block
+            border-radius: 0.25em
+            text-align: center
+            color: #e5edff
+            font-family: system-ui
+            font-weight: 700
+
+
+
+
+
+
+
+
+
