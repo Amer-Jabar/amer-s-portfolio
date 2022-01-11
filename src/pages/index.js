@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header';
 import Skills from '../components/Skills';
@@ -10,26 +11,35 @@ import '../styles/index.sass';
 
 const AmersPortfolio = () => {
 
-  React.useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-  
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-    });
-  }, []);
+  const [landed, setLanded] = React.useState(false);
 
-  return (
-    <div className='container'>
-      <Header />
-      <Skills />
-      <Projects />
-      <Contact />
-    </div>
-  )
+  React.useEffect(() => setTimeout(() => setLanded(true), 3000), []);
+
+  React.useEffect(() => {}, [landed]);
+
+  if ( landed )
+    return (
+      <div className='container'>
+        <div
+        className='page-background'
+        id='page-background'
+        ></div> 
+        <Header />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+    )
+  else
+    return (
+      <div className='opening'>
+        <StaticImage
+        className='opening-logo'
+        alt='opening logo'
+        src='../images/Aurora-icon.png'
+        />
+      </div>
+    )
 }
 
 export default AmersPortfolio;

@@ -5,6 +5,148 @@
 // **** 4th: #FFFFFF
 // **** 5th: #edeba7
 
+@media screen and ( max-width: 992px )
+    .introduction
+        padding: 5em 2em !important
+
+@media screen and ( max-width: 768px )
+    .link-group
+        display: none !important
+    
+    .link-sidebar-menu
+        width: 3em
+        padding: 0.5em
+        display: flex !important
+        flex-direction: column !important
+        justify-content: space-around !important
+        align-items: flex-end !important
+        border-radius: 0.25em !important
+        cursor: pointer !important
+        transition-duration: 0.3s !important
+
+        &:hover
+            background: #e5edff38
+
+        span
+            background: #e5edff !important
+            height: 0.1em !important
+            border-radius: 1em !important
+
+            &:nth-of-type(1)
+                width: 40% !important
+
+            &:nth-of-type(2)
+                width: 60% !important
+
+            &:nth-of-type(3)
+                width: 100% !important
+
+    .introduction
+        padding: 5em 0em !important
+
+        h3
+            font-size: 14px !important
+
+        h1
+            &:nth-of-type(1)
+                font-size: 48px !important
+
+            &:nth-of-type(2)
+                font-size: 40px !important
+
+        p
+            width: 75vw !important
+
+        .resume
+            font-size: 14px !important
+
+@media screen and ( max-width: 600px )
+    .introduction
+        padding: 6em 0em !important
+
+        h1
+            &:nth-of-type(1)
+                margin: 1em 0em 0.5em 0em !important
+                font-size: 36px !important
+
+            &:nth-of-type(2)
+                font-size: 30px !important
+
+        p
+            margin-block: 4em 7em !important
+            font-size: 16px !important
+
+        .resume-container
+            .resume
+                padding: 1em 2em !important
+
+        .external-links
+            a
+                margin-inline: 1em !important
+
+    .link-sidebar-menu
+        height: 2em !important
+
+@media screen and ( max-width: 500px )
+    .introduction
+        h1
+            &:nth-of-type(1)
+                font-size: 28px !important
+
+            &:nth-of-type(2)
+                font-size: 24px !important   
+
+        .external-links
+            a
+                svg
+                    width: 2em !important
+                    height: 2em !important 
+
+    .link-sidebar-menu
+        width: 2em !important
+
+    .side-link-group
+        span
+            font-size: 12px !important
+    
+@media screen and ( max-width: 400px )
+    .header
+        padding: 1.5em 1em !important
+
+    .navbar
+        .brand-container
+            img
+                width: 40px !important
+                height: 40px !important
+
+        .link-sidebar-menu
+            width: 1.5em !important
+
+    .introduction
+        h3
+            font-size: 12px !important
+
+        h1
+            &:nth-of-type(1)
+                font-size: 20px !important
+
+            &:nth-of-type(2)
+                font-size: 16px !important
+
+        p
+            font-size: 12px !important
+
+        .resume-container
+            .resume
+                box-shadow: 0px 0px 3px 1px #8296c8 !important
+                font-size: 12px !important
+                font-weight: 100
+
+        .external-links
+            a
+                margin-inline: 0.5em !important
+
+
 
 .header
     padding: 1.5em 2em
@@ -26,6 +168,7 @@
     display: flex
     justify-content: space-evenly
     align-items: center
+    animation: bottom-to-top-opening 0.5s ease-out forwards normal
 
     *
         margin: 0px 2em
@@ -36,7 +179,6 @@
     a
         text-decoration: none
         cursor: pointer
-        scroll-behavior: smooth
         transition-duration: 0.3s
 
         &:hover
@@ -45,6 +187,44 @@
     span
         margin-inline: 0em 0.5em
         color: #edeba7
+
+.link-sidebar-menu
+    display: none
+
+    span
+        margin: 0px
+    
+.side-link-group
+    @extend .link-group
+    width: 35vw
+    height: 60vh
+    padding: 20vh 5vw
+    position: fixed
+    top: 0
+    right: -45vw
+    display: flex !important
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    text-align: right
+    justify-content: flex-end
+    background: linear-gradient(45deg, #1f3262fa, #011039eb)
+    box-shadow: 0px 0px 6px 0px black
+    transition-duration: 0.5s
+    z-index: 10
+
+    a
+        width: 100%
+
+    .close-button
+        width: auto
+        height: 3.5em
+        margin: 0em
+        position: absolute
+        top: 4vh
+        right: 1vh
+        display: flex
+
 
 .introduction
     padding: 5em
@@ -60,9 +240,12 @@
         font-size: 16px
         font-family: 'Fira Mono'
         font-weight: 100
+        animation: bottom-to-top-opening 0.5s ease-out forwards normal
 
     h1
         font-family: 'Spartan'
+        opacity: 0
+        animation: bottom-to-top-opening 0.5s ease-out forwards normal
 
         span
             color: #edeba7
@@ -71,19 +254,24 @@
             font-size: 60px
             margin: 0.5em 0em 0.25em 0em
             color: #e5edff
+            animation-delay: 0.5s
 
         &:nth-of-type(2)
             font-size: 52px
             margin: 0em
             color: #8296c8
+            animation-delay: 0.75s
 
     p
         width: 60vw
         margin-block: 2em 4em
         color: #8296c8
+        opacity: 0
         font-size: 18px
         font-family: system-ui
         line-height: 1.5
+        animation: bottom-to-top-opening 0.5s ease-out forwards normal
+        animation-delay: 1s
 
     .button-group
         width: 100%
@@ -113,8 +301,16 @@
                 margin-inline: 2em
                 padding: 0.25em
                 color: #8296c8
+                opacity: 0
                 cursor: pointer                
                 appearance: none
+                animation: right-to-left-opening 0.5s ease-out forwards normal
+
+                &:nth-of-type(1)
+                    animation-delay: 0.5s
+
+                &:nth-of-type(2)
+                    animation-delay: 0.25s
 
                 svg
                     width: 3em
@@ -127,4 +323,21 @@
     &:hover
         background: #f0f8ff42
         border-radius: 0.25em
+
+@keyframes bottom-to-top-opening
+    0%
+        opacity: 0
+        transform: translateY(50px)
+    100%
+        opacity: 1
+        transform: translateY(0px)
+
+@keyframes right-to-left-opening
+    0%
+        opacity: 0
+        transform: translateX(50px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
+
 

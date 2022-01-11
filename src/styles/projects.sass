@@ -6,6 +6,117 @@
 // **** 5th: #FFFFFF
 // **** 5th: #edeba7
 
+@media screen and ( max-width: 1200px ) 
+    .projects-list
+        width: 100% !important
+
+@media screen and ( max-width: 992px ) 
+    .projects
+        padding: 2em !important
+        
+        .project-element-stack-and-links 
+            .project-element-stack 
+                h4
+                    margin-inline: 1em !important
+
+@media screen and ( max-width: 768px )
+    .projects
+        padding: 1em !important
+
+    .projects-header
+        font-size: 40px !important
+
+    .project-element
+        grid-template-rows: repeat(9, 1fr) !important
+        grid-template-columns: repeat(10, 1fr) !important
+
+    .project-element-image
+        grid-row: 2/6 !important
+        grid-column: 2/10 !important
+
+    .project-element-body
+        text-align: center !important
+        align-items: center !important
+        grid-row: 6/10 !important
+        grid-column: 2/10 !important
+
+        h6
+            margin: 1.5em 0em !important
+
+        label
+            margin-bottom: 1em !important
+            display: block !important
+
+        .project-element-card
+            p
+                margin: 0px !important
+
+        .project-element-stack-and-links
+            .project-element-links
+                margin-block: 3vw !important
+    
+@media screen and ( max-width: 600px )
+    .projects-header
+        font-size: 30px !important
+
+    .project-element
+        .project-element-body
+            h6
+                margin: 1em 0em !important
+
+            label
+                font-size: 24px !important
+
+@media screen and ( max-width: 500px )
+    .projects-header
+        font-size: 24px !important
+
+    .project-element
+        .project-element-image
+            grid-column: 1/11 !important
+
+        .project-element-body
+            label
+                margin-bottom: 0.5em !important
+                font-size: 20px !important
+            
+            .project-element-card
+                font-size: 12px !important
+        
+        .project-element-stack-and-links
+            .project-element-links
+                a
+                    font-size: 12px !important
+
+            .project-element-stack
+                h4
+                    font-size: 12px !important
+
+@media screen and ( max-width: 400px )
+    .projects-header
+        font-size: 16px !important
+
+    .project-element
+        .project-element-body
+            h6
+                font-size: 12px !important
+
+            label
+                font-size: 14px !important
+            
+            .project-element-card
+                font-size: 9px !important
+        
+        .project-element-stack-and-links
+            .project-element-links
+                a
+                    font-size: 9px !important
+
+            .project-element-stack
+                h4
+                    margin-block: 1em !important
+                    font-size: 9px !important
+
 
 .projects
     padding: 2em 8em
@@ -14,11 +125,11 @@
     .projects-header
         margin-block: 0em
         text-align: center
-        font-size: 48px
+        font-size: 52px
         font-family: 'Spartan'
 
 .projects-list
-    width: 80%
+    width: 90%
     margin-inline: auto
     display: flex
     flex-wrap: wrap
@@ -27,13 +138,13 @@
 .project-element
     width: 100%
     display: grid
-    grid-template-rows: repeat(8, 1fr)
-    grid-template-columns: repeat(10, 1fr)
+    grid-template-rows: repeat(10, 1fr)
+    grid-template-columns: repeat(14, 1fr)
 
     .project-element-image
         border-radius: 0.25em
-        grid-row: 2 / 8
-        grid-column: 1 / 7
+        grid-row: 3 / 9
+        grid-column: 1 / 8
         box-shadow: 0px 0px 3px 0px #8296c8
         filter: saturate(0.5)
         transition-duration: 0.3s
@@ -47,8 +158,8 @@
         justify-content: space-between
         align-items: flex-end
         text-align: right
-        grid-row: 2 / 8
-        grid-column: 6 / 11
+        grid-row: 2 / 9
+        grid-column: 7 / 15
 
         h6
             margin: 1em 0em
@@ -90,13 +201,14 @@
                     background-color: #4A6099
 
             .project-element-links
-                margin-bottom: 2em
+                margin-bottom: 1em
                 display: flex
+                justify-content: center
 
                 a
-                    width: 100%
+                    width: 25%
                     margin-inline: 1em
-                    padding: 0.5em 0em
+                    padding: 0.5em 1em
                     border-radius: 0.25em
                     color: #e5edff
                     border: 1px solid #e5edff

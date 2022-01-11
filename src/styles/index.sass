@@ -10,6 +10,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap')
 
+html
+    scroll-behavior: smooth
+
 body
     margin: 0px
 
@@ -17,6 +20,39 @@ body
     margin: 0px
     padding: 0px
     background-color: #011039
-    scroll-behavior: smooth
+
+.page-background
+    width: 100%
+    height: 100%
+    position: fixed
+    background: transparent
+    pointer-events: none
+    transition-duration: 0.3s
+    z-index: 5
+
+.opening
+    @extend .container
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .opening-logo
+        width: 10em
+        height: 10em
+        opacity: 0
+        animation: page-opening 3s linear forwards normal
+
+@keyframes page-opening
+    0%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 0
+
+
+
+
 
 

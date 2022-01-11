@@ -6,6 +6,45 @@
 // **** 5th: #FFFFFF
 // **** 5th: #edeba7
 
+@media screen and ( max-width: 768px ) 
+    .contact-header
+        font-size: 40px !important
+
+    .contact-paragraph
+        width: 90% !important
+
+@media screen and ( max-width: 600px ) 
+    .contact-header
+        font-size: 30px !important
+    
+    .contact-paragraph
+        font-size: 16px !important
+
+@media screen and ( max-width: 500px ) 
+    .contact-header
+        font-size: 24px !important
+
+    .contact-paragraph
+        width: 100% !important
+        margin-block: 3em !important
+        font-size: 14px !important
+
+    a
+        font-size: 12px !important
+
+@media screen and ( max-width: 400px ) 
+    .contact
+        padding: 7em 2em !important
+
+    .contact-header
+        font-size: 16px !important
+
+    .contact-paragraph
+        font-size: 11px !important
+
+    a
+        font-size: 9px !important
+
 
 .contact
     padding: 10em 2em
@@ -13,13 +52,14 @@
     flex-direction: column
     align-items: center
 
-    h1
+    .contact-header
         color: rgb(229, 237, 255)
         font-family: 'Spartan'
-        font-size: 48px
+        font-size: 52px
 
-    p
+    .contact-paragraph
         width: 50%
+        margin-block: 2em
         text-align: center
         color: rgb(170, 181, 213)
         font-size: 18px
