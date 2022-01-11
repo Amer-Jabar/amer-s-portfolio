@@ -33,8 +33,10 @@
         color: #B1BFE2
         font-size: 14px
 
-    p
+    a
+        text-decoration: none
         cursor: pointer
+        scroll-behavior: smooth
         transition-duration: 0.3s
 
         &:hover
@@ -105,15 +107,18 @@
 
         .external-links
             display: flex
-            color: #8296c8
 
-            svg
+            a
                 @extend .hoverable
-                width: 3em
-                height: 3em
-                margin-inline: 1em
+                margin-inline: 2em
                 padding: 0.25em
-                cursor: pointer
+                color: #8296c8
+                cursor: pointer                
+                appearance: none
+
+                svg
+                    width: 3em
+                    height: 3em
 
 
 .hoverable

@@ -1,0 +1,116 @@
+// **** 0s: #011039
+// **** 1st: #051745
+// **** 2nd: #4A6099
+// **** 2nd: #8296c8
+// **** 4th: #e5edff
+// **** 5th: #FFFFFF
+// **** 5th: #edeba7
+
+
+.projects
+    padding: 2em 8em
+    color: #e5edff
+
+    .projects-header
+        margin-block: 0em
+        text-align: center
+        font-size: 48px
+        font-family: 'Spartan'
+
+.projects-list
+    width: 80%
+    margin-inline: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.project-element
+    width: 100%
+    display: grid
+    grid-template-rows: repeat(8, 1fr)
+    grid-template-columns: repeat(10, 1fr)
+
+    .project-element-image
+        border-radius: 0.25em
+        grid-row: 2 / 8
+        grid-column: 1 / 7
+        box-shadow: 0px 0px 3px 0px #8296c8
+        filter: saturate(0.5)
+        transition-duration: 0.3s
+
+        &:hover
+            filter: saturate(1)
+
+    .project-element-body
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        text-align: right
+        grid-row: 2 / 8
+        grid-column: 6 / 11
+
+        h6
+            margin: 1em 0em
+            font-size: 16px
+            font-family: system-ui
+            font-weight: 100
+            color: #edeba7
+
+        label
+            font-size: 28px
+            font-family: 'Spartan'
+
+        .project-element-card
+            padding: 1em
+            border-radius: 0.25em
+            color: #aab5d5
+            background-color: #0d1f4e
+            box-shadow: 0px 0px 15px -5px black
+            font-size: 14px
+            font-family: 'Fira Mono'
+            line-height: 1.5
+            z-index: 1
+
+        .project-element-stack-and-links
+            display: flex
+            flex-direction: column
+
+            .project-element-stack
+                display: flex
+
+                h4
+                    margin: 0.5em 1.5em
+                    font-family: 'Fira Mono'
+                    font-size: 14px
+    
+                span
+                    width: 1px
+                    height: 2em
+                    background-color: #4A6099
+
+            .project-element-links
+                margin-bottom: 2em
+                display: flex
+
+                a
+                    width: 100%
+                    margin-inline: 1em
+                    padding: 0.5em 0em
+                    border-radius: 0.25em
+                    color: #e5edff
+                    border: 1px solid #e5edff
+                    text-decoration: none
+                    font-family: 'Fira Mono'
+                    text-align: center
+                    transition-duration: 0.3s
+
+                    &:hover
+                        color: #011039
+                        background-color: #e5edff
+
+
+
+
+
+
