@@ -51,7 +51,14 @@ const Header = ({ pageBackgroundController }) => {
                     I like to create systems and optimize them for real life experiences.</p>
                 <div className='button-group'>
                     <div className='resume-container'>
-                        <button className='resume'>Resume</button>
+                        <a
+                        className='resume'
+                        href='https://drive.google.com/file/d/18u6DW8FkgzYOfWyTaDLIcZ-ksJGV_gBx/view?usp=sharing'
+                        style={{
+                            textDecoration: 'none'
+                        }}
+                        target='__'
+                        >Resume</a>
                     </div>
                     <div className='external-links'>
                         <a target='__' href='https://www.linkedin.com/in/amer-jabar-216318201/'><AiFillLinkedin /></a>
