@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import { AiFillLinkedin, AiFillGithub, AiOutlineGitlab } from 'react-icons/ai';
-
-// import brandLogoSrc from '../images/amer-logo.svg';
 
 import '../styles/header.sass';
 
@@ -20,7 +18,7 @@ const Header = ({ pageBackgroundController }) => {
         <div className='header' id='header'>
             <section className='navbar'>
                 <span className='brand-container'>
-                    <GatsbyImage
+                    <StaticImage
                     src='../images/amer-logo.png'
                     alt='brand logo'
                     width='50'
