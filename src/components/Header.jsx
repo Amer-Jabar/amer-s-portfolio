@@ -21,7 +21,7 @@ const Header = ({ pageBackgroundController }) => {
             <section className='navbar'>
                 <span className='brand-container'>
                     <GatsbyImage
-                    src='../images/amer-logo.svg'
+                    src='../images/amer-logo.png'
                     alt='brand logo'
                     width='50'
                     height='50'
