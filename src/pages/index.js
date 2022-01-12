@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Header from '../components/Header';
+import HeaderComponent from '../components/Header';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contant';
+import SEO from '../components/seo';
 
 import '../styles/index.sass';
 
@@ -12,19 +13,23 @@ import '../styles/index.sass';
 const AmersPortfolio = () => {
 
   const [landed, setLanded] = React.useState(false);
+  const [sideBarIsOpen, setSideBarIsOpen] = React.useState(false);
 
   React.useEffect(() => setTimeout(() => setLanded(true), 3000), []);
-
   React.useEffect(() => {}, [landed]);
+  React.useEffect(() => {}, [sideBarIsOpen]);
+
+  const Header = React.useCallback(() => HeaderComponent({ pageBackgroundController: setSideBarIsOpen }), []);
 
   if ( landed )
     return (
       <div className='container'>
+        <SEO />
         <div
-        className='page-background'
+        className={`page-background ${sideBarIsOpen ? 'background-blur' : 'background-non-blur'}`}
         id='page-background'
         ></div> 
-        <Header />
+        <Header />      
         <Skills />
         <Projects />
         <Contact />
@@ -36,7 +41,7 @@ const AmersPortfolio = () => {
         <StaticImage
         className='opening-logo'
         alt='opening logo'
-        src='../images/Aurora-icon.png'
+        src='../images/amer-logo.svg'
         />
       </div>
     )

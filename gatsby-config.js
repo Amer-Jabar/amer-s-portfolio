@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Amer",
+    siteUrl: "https://amer.netlify.app",
+    title: "Amer Muhammed",
+    titleTemplate: "This is my portfolio",
+    description: 'I am Amer. This is my personal portfolio on the web.'
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -12,7 +14,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/Aurora-icon.png",
+        icon: "src/images/amer-logo.svg",
       },
     },
     "gatsby-plugin-sharp",

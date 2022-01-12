@@ -1,34 +1,26 @@
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { AiFillLinkedin, AiFillGithub, AiOutlineGitlab } from 'react-icons/ai';
 
-import brandLogoSrc from '../images/icon.png';
+import brandLogoSrc from '../images/amer-logo.svg';
 
 import '../styles/header.sass';
 
-const toggleShowSidebar = () => {
-    let sideBarIsOpen = false;
-    const inScreenToggler = document.querySelector('#link-sidebar-menu');
-    const inSideBarLinks = document.querySelectorAll('#side-link-group a');
-    const sideBar = document.querySelector('#side-link-group');
-    const pageBackground = document.querySelector('#page-background');
 
-    [inScreenToggler, ...inSideBarLinks]
-    .forEach(toggler => toggler.addEventListener('click', () => {
-        sideBar.style.right = sideBarIsOpen ? '-45vw' : '0vw';
-        pageBackground.style.backdropFilter = sideBarIsOpen ? 'blur(0px)' : 'blur(3px)';
-        sideBarIsOpen = !sideBarIsOpen;
-    }))
-}
+const Header = ({ pageBackgroundController }) => {
 
-const Header = () => {
-
-    useEffect(() => toggleShowSidebar(), []);
+    const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
+    const toggle = () => {
+        setSideBarIsOpen(!sideBarIsOpen)
+        pageBackgroundController(!sideBarIsOpen);
+    };
 
     return (
         <div className='header' id='header'>
             <section className='navbar'>
-                <span className='brand-container'><img src={brandLogoSrc} alt='brand logo' /></span>
+                <span className='brand-container'>
+                    <img src={brandLogoSrc} alt='brand logo' width='50' height='50' />
+                </span>
                 <div className='link-group'>
                     <a href='#home'><span>1.</span>Home</a>
                     <a href='#skills'><span>2.</span>Skills</a>
@@ -38,7 +30,7 @@ const Header = () => {
                 <div 
                 className='link-sidebar-menu' 
                 id='link-sidebar-menu'
-                on={() => toggleShowSidebar()}
+                onClick={() => toggle()}
                 >
                     <span></span>
                     <span></span>
@@ -65,10 +57,18 @@ const Header = () => {
             <div 
             className='side-link-group'
             id='side-link-group'
+            style={
+                sideBarIsOpen ? {
+                    right: '0vw'
+                } : {
+                    right: '-45vw'
+                }
+            }
             >
                 <a
                 className='close-button'
                 id='close-button'
+                onClick={() => toggle()}
                 >
                     <div className='link-sidebar-menu'>
                         <span></span>
@@ -76,10 +76,10 @@ const Header = () => {
                         <span></span>
                     </div>
                 </a>
-                <a href='#home' id='sidebar-link'><span>1.</span>Home</a>
-                <a href='#skills' id='sidebar-link'><span>2.</span>Skills</a>
-                <a href='#projects' id='sidebar-link'><span>3.</span>Projects</a>
-                <a href='#contact' id='sidebar-link'><span>4.</span>Contact</a>
+                <a href='#home' id='sidebar-link' onClick={() => toggle()}><span>1.</span>Home</a>
+                <a href='#skills' id='sidebar-link' onClick={() => toggle()}><span>2.</span>Skills</a>
+                <a href='#projects' id='sidebar-link' onClick={() => toggle()}><span>3.</span>Projects</a>
+                <a href='#contact' id='sidebar-link' onClick={() => toggle()}><span>4.</span>Contact</a>
             </div>
         </div>
     )

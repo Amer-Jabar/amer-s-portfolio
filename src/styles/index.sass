@@ -6,9 +6,10 @@
 // **** 5th: #FFFFFF
 // **** 5th: #edeba7
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap')
+@font-face
+    font-family: 'Spartan'
+    src: url('../fonts/Spartan-Bold.woff2') format('woff2')
+
 
 html
     scroll-behavior: smooth
@@ -30,6 +31,12 @@ body
     transition-duration: 0.3s
     z-index: 5
 
+.background-blur
+    backdrop-filter: blur(4px)
+
+.background-non-blur
+    backdrop-filter: blur(0px)
+
 .opening
     @extend .container
     height: 100vh
@@ -40,13 +47,16 @@ body
     .opening-logo
         width: 10em
         height: 10em
+        background-color: #011039
         opacity: 0
         animation: page-opening 3s linear forwards normal
 
 @keyframes page-opening
     0%
         opacity: 0
-    50%
+    40%
+        opacity: 1
+    60%
         opacity: 1
     100%
         opacity: 0

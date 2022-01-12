@@ -11,8 +11,9 @@ const Projects = () => (
             <div className='project-element'>
                 <StaticImage
                 className='project-element-image'
-                src='../images/aurora-project.png'
+                src='../images/aurora-project.webp'
                 alt='project image'
+                quality={50}
                 />
                 <div className='project-element-body'>
                     <div>
@@ -42,8 +43,9 @@ const Projects = () => (
             <div className='project-element'>
                 <StaticImage
                 className='project-element-image'
-                src='../images/snake-game.png'
+                src='../images/snake-game.webp'
                 alt='project image'
+                quality={50}
                 />
                 <div className='project-element-body'>
                     <div>
