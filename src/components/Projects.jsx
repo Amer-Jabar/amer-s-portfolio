@@ -60,7 +60,7 @@ const Projects = () => (
                     </div>
                     <div className='project-element-stack-and-links'>
                         <div className='project-element-links'>
-                            <a target='__' href='https://gitlab.com/amer-org/ecommerce-website'>Source</a>
+                            <a target='__' href='https://gitlab.com/amerjabar0000/aurora-shop'>Source</a>
                             <a target='__' href='https://aurora-shop.vercel.app'>Visit</a>
                         </div>
                         <div className='project-element-stack'>
