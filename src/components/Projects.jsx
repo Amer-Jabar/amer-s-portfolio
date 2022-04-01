@@ -104,38 +104,8 @@ const Projects = () => (
                     </div>
                 </div>
             </div>
-            <div className='project-element'>
-                <StaticImage
-                className='project-element-image'
-                src='../images/snake-game.webp'
-                alt='project image'
-                quality={50}
-                />
-                <div className='project-element-body'>
-                    <div>
-                        <label>Snake Game</label>
-                    </div>
-                    <div className='project-element-card'>
-                        <p>The famous snake game implemented in react using linked-list data structure.</p>
-                    </div>
-                    <div className='project-element-stack-and-links'>
-                        <div className='project-element-links'>
-                            <a target='__' href='https://gitlab.com/amerjabar0000/snake-game'>Source</a>
-                            <a target='__' href='https://reactsnakegameproject.azurewebsites.net/'>Visit</a>
-                        </div>
-                        <div className='project-element-stack'>
-                            <h4>React.js</h4>                            
-                            <span></span>
-                            <h4>Sass</h4>
-                            <span></span>
-                            <h4>HTML</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
 );
-
 
 export default Projects;

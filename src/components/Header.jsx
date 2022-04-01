@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { AiFillLinkedin, AiFillGithub, AiOutlineGitlab } from 'react-icons/ai';
 
+import resumeSrc from "../docs/Amer's Resume v3.pdf";
+
 import '../styles/header.sass';
 
 
@@ -51,7 +53,7 @@ const Header = ({ pageBackgroundController }) => {
                     <div className='resume-container'>
                         <a
                         className='resume'
-                        href='https://drive.google.com/file/d/18u6DW8FkgzYOfWyTaDLIcZ-ksJGV_gBx/view?usp=sharing'
+                        href={resumeSrc}
                         style={{
                             textDecoration: 'none'
                         }}
