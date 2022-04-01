@@ -11,13 +11,48 @@ const Projects = () => (
             <div className='project-element'>
                 <StaticImage
                 className='project-element-image'
-                src='../images/aurora-project.webp'
+                src='../images/horizon-project.webp'
                 alt='project image'
                 quality={50}
                 />
                 <div className='project-element-body'>
                     <div>
                         <h6>Latest project</h6>
+                        <label>Horizon Project</label>
+                    </div>
+                    <div className='project-element-card'>
+                        <p>Horizon project is a suit of services that compose up a web application to serve tv show media contents to users.</p>
+                    </div>
+                    <div className='project-element-stack-and-links'>
+                        <div className='project-element-links'>
+                            <a target='__' href='https://github.com/Amer-Jabar/horizon-project'>Source</a>
+                            <a target='__' href='https://horizon-rho.vercel.app/'>Visit</a>
+                        </div>
+                        <div className='project-element-stack'>
+                            <h4>Angular</h4>
+                            <span></span>
+                            <h4>Spring Boot</h4>
+                            <span></span>
+                            <h4>Node.js</h4>
+                            <span></span>
+                            <h4>PostgreSQL</h4>
+                            <span></span>
+                            <h4>MongoDB</h4>
+                            <span></span>
+                            <h4>Sass</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='project-element'>
+                <StaticImage
+                className='project-element-image'
+                src='../images/aurora-project.webp'
+                alt='project image'
+                quality={50}
+                />
+                <div className='project-element-body'>
+                    <div>
                         <label>Aurora Shop</label>
                     </div>
                     <div className='project-element-card'>
@@ -43,13 +78,41 @@ const Projects = () => (
             <div className='project-element'>
                 <StaticImage
                 className='project-element-image'
+                src='../images/machine-learning-visualizer-project.webp'
+                alt='project image'
+                quality={50}
+                />
+                <div className='project-element-body'>
+                    <div>
+                        <label>Machine Learning Visualier</label>
+                    </div>
+                    <div className='project-element-card'>
+                        <p>A visualization tool that demonstrates the real-time actions of machine learning algorithms.</p>
+                    </div>
+                    <div className='project-element-stack-and-links'>
+                        <div className='project-element-links'>
+                            <a target='__' href='https://github.com/Amer-Jabar/machine-learning-visualizer'>Source</a>
+                            <a target='__' href='https://machinelearningvisualizer.vercel.app/'>Visit</a>
+                        </div>
+                        <div className='project-element-stack'>
+                            <h4>React.js</h4>
+                            <span></span>
+                            <h4>Django</h4>
+                            <span></span>
+                            <h4>Sass</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='project-element'>
+                <StaticImage
+                className='project-element-image'
                 src='../images/snake-game.webp'
                 alt='project image'
                 quality={50}
                 />
                 <div className='project-element-body'>
                     <div>
-                        <h6>First project</h6>
                         <label>Snake Game</label>
                     </div>
                     <div className='project-element-card'>
