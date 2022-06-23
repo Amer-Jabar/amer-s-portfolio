@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { AiFillLinkedin, AiFillGithub, AiOutlineGitlab } from 'react-icons/ai';
 
-import resumeSrc from "../docs/Amer's Resume v3.pdf";
+import resumeSrc from "../docs/Amer's Resume v4.pdf";
 
 import '../styles/header.sass';
 
@@ -61,8 +61,8 @@ const Header = ({ pageBackgroundController }) => {
                         >Resume</a>
                     </div>
                     <div className='external-links'>
-                        <a target='__' href='https://www.linkedin.com/in/amer-jabar-216318201/'><AiFillLinkedin /></a>
-                        <a target='__' href='https://github.com/AmerJabar'><AiFillGithub /></a>
+                        <a target='__' href='https://www.linkedin.com/in/amerjabar'><AiFillLinkedin /></a>
+                        <a target='__' href='https://github.com/Amer-Jabar'><AiFillGithub /></a>
                         <a target='__' href='https://gitlab.com/amerjabar0000'><AiOutlineGitlab /></a>
                     </div>
                 </div>
